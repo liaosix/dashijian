@@ -36,8 +36,9 @@ $(function() {
         // 登录
     $('#form-login').on('submit', function(e) {
         e.preventDefault();
+        console.log($(this).serialize());
         $.ajax({
-            method: 'post',
+            method: 'POST',
             url: '/api/login',
             data: $(this).serialize(),
             success: function(res) {
